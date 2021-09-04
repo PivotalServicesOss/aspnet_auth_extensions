@@ -1,16 +1,10 @@
 <Project>
   <PropertyGroup>
-    <PivotalServicesPackageVersion>1.0.1</PivotalServicesPackageVersion>
-    <PivotalServicesPackageVersionSuffix></PivotalServicesPackageVersionSuffix>
-    <PivotalServicesPackageVersionRevision>0</PivotalServicesPackageVersionRevision>
-    <PivotalServicesPackageBuildNumber>$([System.DateTime]::Now.ToString(yyyyMMddHHmmss))</PivotalServicesPackageBuildNumber>
-    <PivotalServicesPackageCopyright>All rights reserved.</PivotalServicesPackageCopyright>
-    <PivotalServicesPackageFullVersion>$(PivotalServicesPackageVersion)$(PivotalServicesPackageVersionSuffix)</PivotalServicesPackageFullVersion>
-    <PivotalServicesPackageAssemblyVersion>$(PivotalServicesPackageVersion).$(PivotalServicesPackageVersionRevision)</PivotalServicesPackageAssemblyVersion>
-    <PivotalServicesPackageFileVersion>$(PivotalServicesPackageVersion).$(PivotalServicesPackageVersionRevision)</PivotalServicesPackageFileVersion>
-    <PivotalServicesPackageInformationalVersion>$(PivotalServicesPackageFullVersion)-$(PivotalServicesPackageVersionRevision)-$(PivotalServicesPackageBuildNumber)</PivotalServicesPackageInformationalVersion>
+    <PivotalServicesBootstrapName>PivotalServices.AspNet.Bootstrap.Extensions</PivotalServicesBootstrapName>
+    <PivotalServicesBootstrapCopyright>All rights reserved.</PivotalServicesBootstrapCopyright>
   </PropertyGroup>
   <PropertyGroup>
+    <GitVersionMsBuildVersion>5.6.11</GitVersionMsBuildVersion>
     <MicrosoftAspNetCoreVersion>2.2.0</MicrosoftAspNetCoreVersion>
     <MicrosoftWebVersion>1.0.0</MicrosoftWebVersion>
     <MicrosoftExtensionsVersion>3.1.7</MicrosoftExtensionsVersion>

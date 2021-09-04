@@ -1,9 +1,10 @@
-name: Myget (Pre-Release)
+name: Nuget (Prod Release)
 
 on:
   push:
-    branches:   
-      - feature/**
+    branches:    
+      - master
+
 jobs:
   build:
     runs-on: windows-latest  
@@ -11,8 +12,7 @@ jobs:
       # Checks-out repository
       - uses: actions/checkout@v1
       # Execute psake build script
-      - name: Execute psake build with argument (CiPublish2Myget)
+      - name: Execute psake build with argument (CiPublish2Nuget)
         shell: cmd
         run: |
-          build.cmd CiPublish2Myget ${{ secrets.MYGET_API_KEY }}
-        
+          build.cmd CiPublish2Nuget ${{ secrets.NUGET_API_KEY }}

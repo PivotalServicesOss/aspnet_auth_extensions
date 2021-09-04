@@ -1,17 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{27181691-9684-4254-AE70-DBF6444BCA73}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution_items", "solution_items", "{2FDD2735-3158-43EB-94C8-3FB0F9264BEE}"
 	ProjectSection(SolutionItems) = preProject
-		azure-pipelines.yml = azure-pipelines.yml
 		build.bat = build.bat
 		configure-build.ps1 = configure-build.ps1
 		default.ps1 = default.ps1
 		nuget.config = nuget.config
+		.github\workflows\pre-release-pipeline.yml = .github\workflows\pre-release-pipeline.yml
+		.github\workflows\prod-release-pipeline.yml = .github\workflows\prod-release-pipeline.yml
 		README.md = README.md
 		versions.props = versions.props
 	EndProjectSection

@@ -1,3 +1,6 @@
+#### 1.0.2
+- Consumed latest base package 1.1.2 together with Microsoft packages
+
 #### 1.0.1
 - Consumed latest base package 1.1.1
 

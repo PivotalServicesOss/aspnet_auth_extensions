@@ -1,64 +1,68 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\versions.props" />
-  <PropertyGroup>
-    <TargetFramework>$(TargetFrameworkGeneral)</TargetFramework>
-    <RootNamespace>$(PivotalServicesBootstrapName)</RootNamespace>
-    <DebugType>Embedded</DebugType>
-    <EmbedAllSources>true</EmbedAllSources>
-    <UpdateAssemblyInfo>true</UpdateAssemblyInfo>
-    <UpdateVersionProperties>true</UpdateVersionProperties>
-    <IsPackable>true</IsPackable>
-    <NoWarn>$(NoWarn);1591</NoWarn>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+	<Import Project="..\..\versions.props" />
+	<PropertyGroup>
+		<TargetFramework>$(TargetFrameworkGeneral)</TargetFramework>
+		<RootNamespace>$(PivotalServicesBootstrapName)</RootNamespace>
+		<DebugType>Embedded</DebugType>
+		<EmbedAllSources>true</EmbedAllSources>
+		<UpdateAssemblyInfo>true</UpdateAssemblyInfo>
+		<UpdateVersionProperties>true</UpdateVersionProperties>
+		<IsPackable>true</IsPackable>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <PackageId>$(PivotalServicesBootstrapName)</PackageId>
-    <Title>$(PivotalServicesBootstrapName)</Title>
-    <Version>1.0.0</Version>
-    <Authors>ajaganathan</Authors>
-    <Company>Pivotal</Company>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>$(PivotalServicesBootstrapCopyright)</Copyright>
-    <RepositoryUrl>https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>ASP.NET; Windows; Authentication; Kerberos</PackageTags>
-    <Description>Package helps to enable Windows Auth using Kerberos in container(not joined to a domain controller) platform</Description>
-    <PackageProjectUrl>https://www.alfusjaganathan.com/projects/</PackageProjectUrl>
-  </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="$(MicrosoftAspNetCoreVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="$(MicrosoftAspNetCoreVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions">
-      <Version>$(MicrosoftExtensionsVersion)</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Web.Infrastructure">
-      <Version>$(MicrosoftWebVersion)</Version>
-    </PackageReference>
-    <PackageReference Include="Kerberos.NET" Version="$(KerberosNetVersion)" />
-    <PackageReference Include="PivotalServices.AspNet.Bootstrap.Extensions" Version="$(PivotalServicesBootstrapExtensionsPackageVersion)" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web" />
-  </ItemGroup>
+	<PropertyGroup>
+		<PackageId>$(PivotalServicesBootstrapName)</PackageId>
+		<Title>$(PivotalServicesBootstrapName)</Title>
+		<Version>1.0.0</Version>
+		<Authors>ajaganathan</Authors>
+		<Company>Pivotal</Company>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Copyright>$(PivotalServicesBootstrapCopyright)</Copyright>
+		<RepositoryUrl>https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>ASP.NET; Windows; Authentication; Kerberos</PackageTags>
+		<Description>Package helps to enable Windows Auth using Kerberos in container(not joined to a domain controller) platform</Description>
+		<PackageProjectUrl>https://www.alfusjaganathan.com/projects/</PackageProjectUrl>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Update="Web.config.install.xdt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Web.config.uninstall.xdt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="GitVersion.MsBuild" Version="$(GitVersionMsBuildVersion)">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication" Version="$(MicrosoftAspNetCoreVersion)" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="$(MicrosoftAspNetCoreVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions">
+			<Version>$(MicrosoftExtensionsVersion)</Version>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Web.Infrastructure">
+			<Version>$(MicrosoftWebVersion)</Version>
+		</PackageReference>
+		<PackageReference Include="Kerberos.NET" Version="$(KerberosNetVersion)" />
+		<PackageReference Include="PivotalServices.AspNet.Bootstrap.Extensions" Version="$(PivotalServicesBootstrapExtensionsPackageVersion)" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="readme.txt" pack="true" PackagePath="." />
-    <Content Include="Web.config.install.xdt" pack="true" PackagePath="./Content" />
-    <Content Include="Web.config.uninstall.xdt" pack="true" PackagePath="./Content" />
-  </ItemGroup>
-  
+	<ItemGroup>
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Web" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Web.config.install.xdt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Web.config.uninstall.xdt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="readme.txt" pack="true" PackagePath="." />
+		<Content Include="Web.config.install.xdt" pack="true" PackagePath="./Content" />
+		<Content Include="Web.config.uninstall.xdt" pack="true" PackagePath="./Content" />
+	</ItemGroup>
+
 </Project>

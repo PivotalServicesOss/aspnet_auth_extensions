@@ -1,15 +1,15 @@
 <Project>
   <PropertyGroup>
-    <PivotalServicesBootstrapName>PivotalServices.AspNet.Bootstrap.Extensions</PivotalServicesBootstrapName>
+    <PivotalServicesBootstrapName>PivotalServices.AspNet.Auth.Extensions</PivotalServicesBootstrapName>
     <PivotalServicesBootstrapCopyright>All rights reserved.</PivotalServicesBootstrapCopyright>
   </PropertyGroup>
   <PropertyGroup>
     <GitVersionMsBuildVersion>5.6.11</GitVersionMsBuildVersion>
     <MicrosoftAspNetCoreVersion>2.2.0</MicrosoftAspNetCoreVersion>
     <MicrosoftWebVersion>1.0.0</MicrosoftWebVersion>
-    <MicrosoftExtensionsVersion>3.1.7</MicrosoftExtensionsVersion>
+    <MicrosoftExtensionsVersion>3.1.18</MicrosoftExtensionsVersion>
     <KerberosNetVersion>2.7.508.1</KerberosNetVersion>
-    <PivotalServicesBootstrapExtensionsPackageVersion>1.1.1</PivotalServicesBootstrapExtensionsPackageVersion>
+    <PivotalServicesBootstrapExtensionsPackageVersion>1.1.2</PivotalServicesBootstrapExtensionsPackageVersion>
     <TargetFrameworkGeneral>net461</TargetFrameworkGeneral>
   </PropertyGroup>
 </Project>
